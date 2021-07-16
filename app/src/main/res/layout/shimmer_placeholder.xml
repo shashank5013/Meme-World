@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:layout_margin="16dp"
+    android:elevation="30dp"
+    android:backgroundTint="@color/cardViewColor"
+    app:cardCornerRadius="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.93" />
+
+        <ImageView
+            android:id="@+id/memeImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:src="@drawable/meme"
+            android:scaleType="fitXY"
+            android:background="@color/placeholder_color"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+        <TextView
+            android:id="@+id/meme_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            tools:text="funny meme"
+            android:text="Title"
+            android:maxLines="2"
+            android:background="@color/placeholder_color"
+            android:textColor="@color/placeholder_color"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline1"
+            app:layout_constraintEnd_toEndOf="@+id/subreddit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/subreddit"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.937" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-medium"
+            tools:text="posted by shashank"
+            android:textColor="@color/placeholder_color"
+            android:textSize="12sp"
+            android:text="posted by shashank"
+            android:background="@color/placeholder_color"
+            app:layout_constraintBottom_toTopOf="@+id/meme_title"
+            app:layout_constraintEnd_toEndOf="@+id/subreddit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/subreddit"
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/subreddit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="sans-serif-medium"
+            tools:text="me/irl"
+            android:textColor="@color/placeholder_color"
+            android:text="me/irl"
+            android:textSize="15sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.009"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.444"
+            android:background="@color/placeholder_color"/>
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="8dp"
+            tools:src="@drawable/like"
+            android:background="@color/placeholder_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/like_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:background="@color/placeholder_color"
+            android:text="2666"
+            android:textColor="@color/placeholder_color"
+            app:layout_constraintBottom_toBottomOf="@+id/like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/like"
+            app:layout_constraintTop_toTopOf="@+id/like" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/placeholder_color"
+            tools:src="@drawable/share"
+            app:layout_constraintBottom_toBottomOf="@+id/like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.829"
+            app:layout_constraintStart_toEndOf="@+id/like_counter"
+            app:layout_constraintTop_toTopOf="@+id/like"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.10" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="@+id/memeImage"
+            app:layout_constraintStart_toStartOf="@+id/memeImage"
+            app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
